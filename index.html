@@ -1,15 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Animal Tastic</title>
+	<title>Animals Galore</title>
 
 <!-- Bootstrap -->
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
 <!-- CSS Override -->
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+<!-- Google Font -->
+<link href='https://fonts.googleapis.com/css?family=Catamaran:400,500' rel='stylesheet' type='text/css'>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<!-- App JS -->
+<script src="assets/javascript/app.js"></script>
 </head>
 <body>
+
+<header>
+
+	<h1>Animals Galore</h1>
+
+</header>
+
+<div class="container">
+	<div class="row">
+
+
+		<!-- Animal Buttons -->
+		<div class="col-md-10" class="animal-buttons">
+			<button class="btn-custom" data-animal="cat">Cat</button>
+		    <button class="btn-custom" data-animal="dog">Dog</button>
+		    <button class="btn-custom" data-animal="turtle">Turtle</button>
+		    <button class="btn-custom" data-animal="screechowl">Screech Owl</button>
+		    <button class="btn-custom" data-animal="bison">Bison</button>
+		    <button class="btn-custom" data-animal="bullmastic">Bull Mastif</button>
+		    <button class="btn-custom" data-animal="hippopotamus">Hippopotamus</button>
+		    <button class="btn-custom" data-animal="giraffe">Giraffe</button>
+		    <button class="btn-custom" data-animal="greyhound">Greyhound</button>
+		    <button class="btn-custom" data-animal="koala">Koala</button>
+	    </div><!--End of First Column --> 
+
+
+	    <!-- Search box to add an animal -->
+	    <div class="col-md-2">
+	    	<form id="animal-form">
+			    <label form="animal-input">Add an animal</label>
+			    <input type="text" id="animal-input"><br>
+    			<input id="findAnimal" type="submit" value="Animal Search">  
+  			</form>
+	    </div><!-- End of Second Column -->
+    </div><!--End of First Row-->
+
+    <!-- GifArea -->
+    <div class="row">
+    	<div class="col-md-12" class="animal-gifs">
+			<div id="gifArea"></div>
+		</div><!--End of Third Column --> 
+	</div><!--End of Second Row-->
+
+
+</div><!--End of Container -->
+
 
 </body>
 </html>

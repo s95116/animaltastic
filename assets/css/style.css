@@ -1,0 +1,27 @@
+body{
+	font-family: 'Catamaran', sans-serif;
+}
+
+header{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+	background-color: #95C3F3;
+	color:white;
+}
+
+.btn-custom { 
+  color: #ffffff; 
+  background-color: #4290E3; 
+  border: 0 none;
+  padding:10px;
+  margin: 0 13 0 13px;
+  font-size: 17px;
+  border-radius: 24px;
+
+} 
+
+.columnFix{
+
+}
