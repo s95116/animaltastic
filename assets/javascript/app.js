@@ -34,15 +34,38 @@ $(document).ready(function() {
                     var animalImage = $('<img>');
                     animalImage.attr('src', results[i].images.fixed_height.url);
                     animalDiv.append(p);
-                    animalDiv.append(animalImage);
-
-                    
+                    animalDiv.append(animalImage);   
                     $('#gifArea').prepend(animalDiv);
-
                 }
-
             });
     });
+
+	//On click function for adding new animal buttons
+	$('#addAnimal').on('click',function() {
+
+		var newAnimal = $('#animal-input').val().trim();
+		console.log(newAnimal);
+
+		var userAnimals = [''];
+		console.log(userAnimals);
+
+		for (var i = 0; i < userAnimals.length; i++) {
+			userAnimals[i]
+		}
+
+		var newButton = $('<button>');
+		newButton.addClass('animalButton');
+		newButton.attr('data-name', userAnimals[i]);
+		newButton.text(userAnimals[i])
+
+
+		$('#animalButton').append(newButton)
+
+
+		// renderButtons();
+
+	});
+
 
  
 });//End of document.ready function
