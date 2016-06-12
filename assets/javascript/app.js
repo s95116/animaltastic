@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+	//Global variable(s)
+	var userAnimals = [];
+
+
 	//Gif AJAX Query
 
 	//On click function for animal buttons
@@ -43,27 +47,28 @@ $(document).ready(function() {
 	//On click function for adding new animal buttons
 	$('#addAnimal').on('click',function() {
 
+		//Create new variable from input-box
 		var newAnimal = $('#animal-input').val().trim();
 		console.log(newAnimal);
 
-		var userAnimals = [''];
-		console.log(userAnimals);
-
+		//The animal the user enters gets pushed into the newAnimal array
+		userAnimals.push(newAnimal);
+		
+		//Loops through the array and creates buttons for each new animal
 		for (var i = 0; i < userAnimals.length; i++) {
-			userAnimals[i]
-		}
-
+			
 		var newButton = $('<button>');
 		newButton.addClass('animalButton');
-		newButton.attr('data-name', userAnimals[i]);
+		newButton.attr('data-animal', userAnimals[i]);
 		newButton.text(userAnimals[i])
 
 
-		$('#animalButton').append(newButton)
-
-
-		// renderButtons();
-
+		$('#animal-buttons').append(newButton)
+		
+		}
+		
+		//Prevents the page from reloading when 
+		return false;
 	});
 
 
