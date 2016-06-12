@@ -3,20 +3,15 @@
 <head>
 	<title>Animals Galore</title>
 
-<!-- Bootstrap -->
+<!-- Bootstrap CDN & CSS Override & GoogleFont-->
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-
-<!-- CSS Override -->
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-<!-- Google Font -->
 <link href='https://fonts.googleapis.com/css?family=Catamaran:400,500' rel='stylesheet' type='text/css'>
 
-<!-- jQuery -->
+<!-- jQuery & AJAX CDN  -->
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 
-<!-- App JS -->
-<script src="assets/javascript/app.js"></script>
 </head>
 <body>
 
@@ -31,17 +26,17 @@
 
 
 		<!-- Animal Buttons -->
-		<div class="col-md-10" class="animal-buttons">
-			<button class="btn-custom" data-animal="cat">Cat</button>
-		    <button class="btn-custom" data-animal="dog">Dog</button>
-		    <button class="btn-custom" data-animal="turtle">Turtle</button>
-		    <button class="btn-custom" data-animal="screechowl">Screech Owl</button>
-		    <button class="btn-custom" data-animal="bison">Bison</button>
-		    <button class="btn-custom" data-animal="bullmastic">Bull Mastif</button>
-		    <button class="btn-custom" data-animal="hippopotamus">Hippopotamus</button>
-		    <button class="btn-custom" data-animal="giraffe">Giraffe</button>
-		    <button class="btn-custom" data-animal="greyhound">Greyhound</button>
-		    <button class="btn-custom" data-animal="koala">Koala</button>
+		<div class="col-md-10" id="animal-buttons">
+			<button id="btn-custom" class="animalButton" data-animal="cat">Cat</button>
+		    <button id="btn-custom" class="animalButton" data-animal="dog">Dog</button>
+		    <button id="btn-custom" class="animalButton" data-animal="turtle">Turtle</button>
+		    <button id="btn-custom" class="animalButton" data-animal="screechowl">Screech Owl</button>
+		    <button id="btn-custom" class="animalButton" data-animal="bison">Bison</button>
+		    <button id="btn-custom" class="animalButton" data-animal="bullmastic">Bull Mastif</button>
+		    <button id="btn-custom" class="animalButton" data-animal="hippopotamus">Hippopotamus</button>
+		    <button id="btn-custom" class="animalButton" data-animal="giraffe">Giraffe</button>
+		    <button id="btn-custom" class="animalButton" data-animal="greyhound">Greyhound</button>
+		    <button id="btn-custom" class="animalButton" data-animal="koala">Koala</button>
 	    </div><!--End of First Column --> 
 
 
@@ -50,7 +45,7 @@
 	    	<form id="animal-form">
 			    <label form="animal-input">Add an animal</label>
 			    <input type="text" id="animal-input"><br>
-    			<input id="findAnimal" type="submit" value="Animal Search">  
+    			<input id="addAnimal" type="submit" value="Animal Search">  
   			</form>
 	    </div><!-- End of Second Column -->
     </div><!--End of First Row-->
@@ -65,6 +60,7 @@
 
 </div><!--End of Container -->
 
-
+<!-- App JS -->
+<script src="assets/javascript/app.js"></script>
 </body>
 </html>
