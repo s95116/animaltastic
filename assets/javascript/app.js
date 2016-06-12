@@ -34,14 +34,13 @@ $(document).ready(function() {
                     animalImage.attr('src', results[i].images.fixed_height.url);
                     animalDiv.append(p);
                     animalDiv.append(animalImage);
-                    $('#gifArea').append(animalDiv);
+                    $('#gifArea').prepend(animalDiv);
 
                 }
             });
     });
 
 
-});
+});//End of document.ready function
 
 
-//End of document.ready function
