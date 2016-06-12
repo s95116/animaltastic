@@ -47,28 +47,34 @@ $(document).ready(function() {
 	//On click function for adding new animal buttons
 	$('#addAnimal').on('click',function() {
 
+		
 		//Create new variable from input-box
 		var newAnimal = $('#animal-input').val().trim();
 		console.log(newAnimal);
 
-		//The animal the user enters gets pushed into the newAnimal array
+		//The new animal gets pushed into the newAnimal array
 		userAnimals.push(newAnimal);
-		
-		//Loops through the array and creates buttons for each new animal
+
+		// $("#addAnimal").empty();
+
+		//Loops through the array and creats new buttons for each new animal
 		for (var i = 0; i < userAnimals.length; i++) {
-			
+
 		var newButton = $('<button>');
-		newButton.addClass('animalButton');
-		newButton.attr('data-animal', userAnimals[i]);
+		newButton.addClass('btn-custom animalButton');
+		// newButton.addClass('');
+		newButton.attr('data-name', userAnimals[i]);
 		newButton.text(userAnimals[i])
 
-
+		//Adds new button to the page
 		$('#animal-buttons').append(newButton)
+
 		
 		}
 		
-		//Prevents the page from reloading when 
+		//Prevents page from reloading
 		return false;
+
 	});
 
 
